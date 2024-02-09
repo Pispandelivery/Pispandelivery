@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web Estática</title>
+    <title>Emoticones animados con JavaScript</title>
+    <style>
+        .emoji {
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a mi página web estática</h1>
-    <p>Esta es una página web simple creada con HTML.</p>
+    <h1>¡Emoticones animados con JavaScript!</h1>
+    <div class="emoji" id="emoji">😊</div>
+    <script>
+        const emoji = document.getElementById('emoji');
+        let posX = 0;
+        let posY = 0;
+
+        function moveEmoji() {
+            posX += 5;
+            posY += 3;
+            emoji.style.left = posX + 'px';
+            emoji.style.top = posY + 'px';
+
+            requestAnimationFrame(moveEmoji);
+        }
+
+        moveEmoji();
+    </script>
 </body>
 </html>
