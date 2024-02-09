@@ -17,16 +17,58 @@
             padding: 20px;
             text-align: center;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
+        .logo {
+            width: 150px; /* Ancho del logo */
+            height: auto; /* Altura automática para mantener la proporción */
+            margin-bottom: 20px; /* Espacio entre el logo y el banner */
         }
-        nav a {
-            margin: 0 10px;
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
+        .banner {
+            width: auto; /* Ancho completo del banner */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        .boton {
+            background-color: #2955CA; /* Color de fondo */
+            border: none; /* Sin borde */
+            color: #FFFFFF; /* Color del texto */
+            padding: 15px 32px; /* Espaciado interno (arriba/abajo izquierda/derecha) */
+            text-align: center; /* Alineación del texto */
+            text-decoration: none; /* Sin subrayado */
+            display: inline-block; /* Mostrar como elemento en línea */
+            font-size: 16px; /* Tamaño del texto */
+            margin: 10px; /* Margen exterior */
+            cursor: pointer; /* Cursor al pasar sobre el botón */
+            border-radius: 6px; /* Borde redondeado */
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+
+        /* Cambiar el color de fondo cuando el mouse está encima */
+        .boton:hover {
+            background-color: #C13E3E;
+        }
+
+        /* Cambiar el color de fondo cuando se hace clic */
+        .boton:active {
+            background-color: #3e8e41;
+        }
+
+        /* Estilo para un botón secundario */
+        .boton-secundario {
+            background-color: #008CBA;
+        }
+
+        /* Estilo para un botón de alerta */
+        .boton-alerta {
+            background-color: #f44336;
+        }
+
+        /* Estilo para un botón de éxito */
+        .boton-exito {
+            background-color: #4CAF50;
+        }
+
+        /* Estilo para un botón de información */
+        .boton-info {
+            background-color: #2196F3;
         }
         main {
 			background-color: #C13E3E;
@@ -64,12 +106,13 @@
     <header>
         <!-- Logo con animación -->
         <h1><img src="pispanlogo.png" alt="Logo de mi empresa" width="180" height="150"></h1>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
+		<!-- Banner -->
+        <!-- <img src="banner.png" alt="Banner" class="banner"> -->
+        <button class="boton">Inicio</button>
+		<button class="boton">Acerca de</button>
+		<button class="boton">Servicios</button>
+		<button class="boton">Contacto</button>
+		<button class="boton">Información</button>
     </header>
 
     <main>
