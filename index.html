@@ -3,35 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoticones animados con JavaScript</title>
+    <title>Emoticones animados con CSS</title>
     <style>
         .emoji {
             font-size: 40px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            transition: transform 0.5s ease;
+        }
+        .emoji:hover {
+            transform: scale(1.5);
         }
     </style>
 </head>
 <body>
-    <h1>¡Emoticones animados con JavaScript!</h1>
-    <div class="emoji" id="emoji">😊</div>
-    <script>
-        const emoji = document.getElementById('emoji');
-        let posX = 0;
-        let posY = 0;
-
-        function moveEmoji() {
-            posX += 5;
-            posY += 3;
-            emoji.style.left = posX + 'px';
-            emoji.style.top = posY + 'px';
-
-            requestAnimationFrame(moveEmoji);
-        }
-
-        moveEmoji();
-    </script>
+    <h1>¡Emoticones animados con CSS!</h1>
+    <div class="emoji">😊</div>
 </body>
 </html>
